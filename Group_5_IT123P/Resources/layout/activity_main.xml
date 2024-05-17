@@ -17,17 +17,17 @@
             android:layout_height="match_parent"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:id="@+id/imageView1" />
+            android:id="@+id/randColor_1" />
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/imageView2" />
+            android:id="@+id/randColor_2" />
          <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/imageView3" />
+            android:id="@+id/randColor_3" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,6 +47,7 @@
             android:layout_marginLeft="50dp"
             android:id="@+id/Stop_Button" />
     </LinearLayout>
+
     <TextView
         android:text="Wallet:"
         android:textAppearance="?android:attr/textAppearanceLarge"
