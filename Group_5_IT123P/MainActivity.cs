@@ -11,7 +11,9 @@ namespace Group_5_IT123P
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Button ROLL, STOP;
+            Button Roll_Button, Stop_Button;
+            ImageButton Red_Button,Blue_Button,Yellow_Button,Pink_Button,Green_Button,White_Button, ;
+
 
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
