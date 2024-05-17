@@ -67,9 +67,7 @@ namespace Group_5_IT123P
                 try
                 {
                     randomizer.RandomizeImages(Color_1, Color_2, Color_3);
-                    SetImageViewSize(Color_1);
-                    SetImageViewSize(Color_2);
-                    SetImageViewSize(Color_3);
+
 
                 }
                 catch (Exception ex)
@@ -79,13 +77,7 @@ namespace Group_5_IT123P
                 }
             });
         }
-        private void SetImageViewSize(ImageView imageView)
-        {
-            // Set layout parameters for the ImageView
-            imageView.LayoutParameters.Width = 50;
-            imageView.LayoutParameters.Height = 50;
-            imageView.RequestLayout();
-        }
+ 
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
