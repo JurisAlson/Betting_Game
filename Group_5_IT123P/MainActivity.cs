@@ -36,7 +36,6 @@ namespace Group_5_IT123P
                 Resource.Drawable.blue,
                 Resource.Drawable.green
 
-
       
             });
 
