@@ -15,24 +15,27 @@ namespace Group_5_IT123P
 {
     public class Randomizer
     {
-        private List <int> imageResources;
-    private System.Random random; // Specify System.Random here
+        private List<int> imageResources;
+        private System.Random random;
 
-        public Randomizer(List <int> imageResources)
-    {
-        this.imageResources = imageResources;
-        random = new System.Random(); // Specify System.Random here
-    }
-
-    public void RandomizeImages(params ImageView[] imageViews)
-    {
-        foreach (var imageView in imageViews)
+        public Randomizer(List<int> imageResources)
         {
-            int index = random.Next(imageResources.Count);
-            imageView.SetImageResource(imageResources[index]);
+            this.imageResources = imageResources;
+            random = new System.Random();
+        }
+
+        public void RandomizeImages(params ImageView[] imageViews)
+        {
+            foreach (var imageView in imageViews)
+            {
+                int index = random.Next(imageResources.Count);
+                imageView.SetImageResource(imageResources[index]);
+            }
         }
     }
 }
-}
+
+
+
 
 
