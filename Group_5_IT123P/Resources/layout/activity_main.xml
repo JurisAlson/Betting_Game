@@ -8,12 +8,13 @@
     android:orientation="vertical">
 
     <LinearLayout
+
+        android:layout_marginLeft="85px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_marginLeft="90px"
             android:layout_width="200px"
             android:layout_height="200px"
             android:minWidth="25px"
@@ -49,15 +50,35 @@
             android:id="@+id/Stop_Button" />
     </LinearLayout>
 
-    <TextView
-        android:text="Wallet:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+     <LinearLayout
+        android:layout_marginTop="200px"
+        android:layout_marginLeft="100px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:orientation="horizontal">
 
+        <TextView
+            android:text="Wallet:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="67.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <EditText
+           
+            android:inputType="number"
+            android:layout_width="88.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/money"
+            android:textSize="25px"
+            android:text="" />
+            
+
+
+
+    </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="100px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -69,14 +90,14 @@
             android:minHeight="25px"
             android:id="@+id/Red_Button" />
 
-         <ImageButton
+        <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/Blue_Button" />
-         <ImageButton
+        <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -86,6 +107,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="100px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
