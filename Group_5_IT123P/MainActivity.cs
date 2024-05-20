@@ -16,9 +16,14 @@ namespace Group_5_IT123P
         private EditText Money;
         private Button RollButton, StopButton;
         private ImageView Color_1, Color_2, Color_3;
+        private EditText inputred, inputblue, inputyellow, inputpink, inputgreen, inputwhite;
         private Randomizer randomizer;
 
+        //for betting
+        private ImageButton Image_Button1, Image_Button2, Image_Button3, Image_button4, Image_button5, Image_button6;
+
         private int moneybalance;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,9 +35,37 @@ namespace Group_5_IT123P
             RollButton = FindViewById<Button>(Resource.Id.Roll_Button);
             StopButton = FindViewById<Button>(Resource.Id.Stop_Button);
             Money = FindViewById<EditText>(Resource.Id.money);
+
             Color_1 = FindViewById<ImageView>(Resource.Id.randColor_1);
             Color_2 = FindViewById<ImageView>(Resource.Id.randColor_2);
             Color_3 = FindViewById<ImageView>(Resource.Id.randColor_3);
+
+            //betting colors initialize
+            Image_Button1 = FindViewById<ImageButton>(Resource.Id.Red_Button);
+            Image_Button2 = FindViewById<ImageButton>(Resource.Id.Blue_Button);
+            Image_Button3 = FindViewById<ImageButton>(Resource.Id.Yellow_Button);
+
+            Image_button4 = FindViewById<ImageButton>(Resource.Id.Pink_Button);
+            Image_button5 = FindViewById<ImageButton>(Resource.Id.Green_Button);
+            Image_button6 = FindViewById<ImageButton>(Resource.Id.White_Button);
+
+            //set Colors
+            Image_Button1.SetImageResource(Resource.Drawable.red);
+            Image_Button2.SetImageResource(Resource.Drawable.blue);
+            Image_Button3.SetImageResource(Resource.Drawable.Yellow);
+
+            Image_button4.SetImageResource(Resource.Drawable.pink);
+            Image_button5.SetImageResource(Resource.Drawable.green);
+            Image_button6.SetImageResource(Resource.Drawable.white);
+
+            // Initialize Inputs colors
+            inputred = FindViewById<EditText>(Resource.Id.Inputfor_red);
+            inputblue = FindViewById<EditText>(Resource.Id.Inputfor_blue);
+            inputyellow = FindViewById<EditText>(Resource.Id.Inputfor_yellow);
+
+            inputpink = FindViewById<EditText>(Resource.Id.Inputfor_pink);
+            inputgreen = FindViewById<EditText>(Resource.Id.Inputfor_green);
+            inputwhite = FindViewById<EditText>(Resource.Id.Inputfor_white);
 
             // Initialize randomizer
             randomizer = new Randomizer(new List<int>

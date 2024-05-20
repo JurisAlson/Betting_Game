@@ -45,6 +45,7 @@ namespace Group_5_IT123P
             }
         }
 
+        //Conditions for colorsss
         public void ApplyConditions(ref int balance, params ImageView[] imageViews)
         {
             foreach (var imageView in imageViews)

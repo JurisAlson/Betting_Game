@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
 
+    <LinearLayout
         android:layout_marginLeft="85px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +32,7 @@
             android:id="@+id/randColor_3" />
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +51,7 @@
             android:id="@+id/Stop_Button" />
     </LinearLayout>
 
+
      <LinearLayout
         android:layout_marginTop="200px"
         android:layout_marginLeft="100px"
@@ -64,18 +66,74 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
         <EditText
-           
             android:inputType="number"
             android:layout_width="88.5dp"
             android:layout_height="match_parent"
             android:id="@+id/money"
             android:textSize="25px"
-            android:text="" />
-            
-
-
-
+            android:text="" />        
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/Red_Button"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Red Button" />
+
+        <ImageButton
+            android:id="@+id/Blue_Button"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Blue Button" />
+
+        <ImageButton
+            android:id="@+id/Yellow_Button"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Yellow Button" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:inputType="number"
+            android:layout_width="98.0dp"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_red" />
+
+        <EditText
+            android:inputType="number"
+            android:layout_width="105.0dp"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_blue" />
+
+        <EditText
+            android:inputType="number"
+            android:layout_width="107.0dp"
+            android:layout_height="30.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_yellow" />
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_marginLeft="100px"
@@ -84,54 +142,55 @@
         android:orientation="horizontal">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/Red_Button" />
-
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/Blue_Button" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/Yellow_Button" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginLeft="100px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/Pink_Button" />
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/Green_Button" />
          <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/White_Button" />
     </LinearLayout>
+
+     <LinearLayout
+        android:layout_marginLeft="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:inputType="number"
+            android:layout_width="98.0dp"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_pink" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="105.0dp"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_green" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="107.0dp"
+            android:layout_height="30.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/Inputfor_white" />
+     </LinearLayout>
+
 
 </LinearLayout>
