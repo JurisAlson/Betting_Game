@@ -24,7 +24,6 @@ namespace Group_5_IT123P
 
         private int moneybalance;
 
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -90,7 +89,17 @@ namespace Group_5_IT123P
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-            timer.Start();
+            if (ValidateAndSetBets())
+            {
+                if (randomizer.ValidateBets(moneybalance))
+                {
+                    timer.Start();
+                }
+                else
+                {
+                    Toast.MakeText(this, "You cannot bet more than your current balance.", ToastLength.Short).Show();
+                }
+            }
         }
 
         private void StopButton_Click(object sender, EventArgs e)
@@ -118,6 +127,41 @@ namespace Group_5_IT123P
         private void UpdateBalance()
         {
             Money.Text = moneybalance.ToString();
+        }
+
+        private bool ValidateAndSetBets()
+        {
+            int redBet = GetBetAmount(inputred);
+            int blueBet = GetBetAmount(inputblue);
+            int yellowBet = GetBetAmount(inputyellow);
+            int pinkBet = GetBetAmount(inputpink);
+            int greenBet = GetBetAmount(inputgreen);
+            int whiteBet = GetBetAmount(inputwhite);
+
+            int totalBet = redBet + blueBet + yellowBet + pinkBet + greenBet + whiteBet;
+
+            if (totalBet > moneybalance)
+            {
+                Toast.MakeText(this, "You cannot bet more than your current balance.", ToastLength.Short).Show();
+                return false;
+            }
+
+            randomizer.SetBets(redBet, blueBet, yellowBet, pinkBet, greenBet, whiteBet);
+            return true;
+        }
+
+        private int GetBetAmount(EditText input)
+        {
+            int bet;
+            if (int.TryParse(input.Text, out bet) && bet >= 0)
+            {
+                return bet;
+            }
+            else
+            {
+                Toast.MakeText(this, "Invalid bet amount. Please enter a valid number.", ToastLength.Short).Show();
+                return 0;
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -14,11 +14,13 @@ namespace Group_5_IT123P
         private List<int> imageResources;
         private System.Random random;
         private Dictionary<int, ColorCondition> colorConditions;
+        private Dictionary<int, int> colorBets;
 
         public Randomizer(List<int> imageResources)
         {
             this.imageResources = imageResources;
             this.colorConditions = InitializeColorConditions();
+            this.colorBets = new Dictionary<int, int>();
             random = new System.Random();
         }
 
@@ -59,6 +61,34 @@ namespace Group_5_IT123P
                     }
                 }
             }
+        }
+
+        public void SetBets(int redBet, int blueBet, int yellowBet, int pinkBet, int greenBet, int whiteBet)
+        {
+
+            //sets the betting colors
+            colorBets[Resource.Drawable.red] = redBet;
+            colorBets[Resource.Drawable.blue] = blueBet;
+            colorBets[Resource.Drawable.Yellow] = yellowBet;
+            colorBets[Resource.Drawable.pink] = pinkBet;
+            colorBets[Resource.Drawable.green] = greenBet;
+            colorBets[Resource.Drawable.white] = whiteBet;
+        }
+
+        public bool ValidateBets(int balance)
+        {
+            int totalBet = 0;
+            foreach (var bet in colorBets.Values)
+            {
+                totalBet += bet;
+            }
+
+            if (totalBet > balance)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         // Base class for color conditions
